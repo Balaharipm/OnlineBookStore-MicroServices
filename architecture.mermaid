@@ -1,0 +1,14 @@
+graph TD;
+    Client["Web/Mobile Client"] --> Gateway["API Gateway"];
+    Gateway --> BookService["Book Service"];
+    Gateway --> InventoryService["Inventory Service"];
+    Gateway --> OrderService["Order Service"];
+    Gateway --> CustomerService["Customer Service"];
+    Gateway --> ReviewService["Review Service"];
+    Gateway --> RecommendationService["Recommendation Service"];
+    BookService --> BookDB[(Book DB)];
+    InventoryService --> InventoryDB[(Inventory DB)];
+    OrderService --> OrderDB[(Order DB)];
+    CustomerService --> CustomerDB[(Customer DB)];
+    ReviewService --> ReviewDB[(Review DB)];
+    RecommendationService --> RecommendationDB[(Recommendation DB)];
